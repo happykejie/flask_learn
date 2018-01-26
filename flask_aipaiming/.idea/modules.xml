@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/07Todo.iml" filepath="$PROJECT_DIR$/.idea/07Todo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/flask_learn.iml" filepath="$PROJECT_DIR$/../.idea/flask_learn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../initflask/.idea/initflask.iml" filepath="$PROJECT_DIR$/../../initflask/.idea/initflask.iml" />
     </modules>
   </component>
 </project>

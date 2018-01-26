@@ -6,5 +6,4 @@ app.config.from_object('config')
 
 db = MongoEngine(app)
 
-
-from app import views,models
+from app import views

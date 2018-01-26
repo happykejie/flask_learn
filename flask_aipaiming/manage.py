@@ -1,7 +1,7 @@
-from app import app
-from app.models import Todo
 from flask_script import Manager
 
+from app import Todo
+from app import app
 
 manager = Manager(app)
 

@@ -1,6 +1,7 @@
 import unittest
+
+from app import Todo
 from app import app
-from app.models import Todo
 
 
 class TodoTestCase(unittest.TestCase):

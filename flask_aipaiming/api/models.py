@@ -2,7 +2,7 @@ import datetime
 
 from flask_mongoengine.wtf import model_form
 
-from app import db
+from api import db
 
 
 class Todo(db.Document):
