@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba3e19f6-8567-42d5-b432-f5c991d4829c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/SUI-Mobile-dev/img/AI123.JPEG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/SUI-Mobile-dev/img/xj123.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/category.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/me.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api/views.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api/admin/views.py" afterPath="$PROJECT_DIR$/app/api/admin/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api/deptapi.py" afterPath="$PROJECT_DIR$/app/api/deptapi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api/views.py" afterPath="$PROJECT_DIR$/app/api/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
-    </list>
+    <list default="true" id="ba3e19f6-8567-42d5-b432-f5c991d4829c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,8 +104,8 @@
       <file leaf-file-name="me.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/me.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="247">
+              <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -822,8 +806,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/me.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="247">
+          <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
