@@ -1,6 +1,6 @@
 # coding: utf-8
 from app.api import api
-from flask import jsonify
+from flask import jsonify,make_response
 import json
 user_data = [
     {
@@ -16,7 +16,24 @@ user_data = [
 ]
 
 
+from flask.ext.httpauth import HTTPBasicAuth
+auth = HTTPBasicAuth()
+
+#region  web service access auth
+@auth.get_password
+def get_password(username):
+    if username == 'miguel':
+        return 'python'
+    return None
+
+@auth.error_handler
+def unauthorized():
+    return make_response(jsonify({'error': 'Unauthorized access'}), 401)
+
+#endregion
+
 @api.route('/user/<int:id>', methods=['GET', ])
+@auth.login_required
 def user_get(id):
     for user in user_data:
         if user['id'] == id:

@@ -22,6 +22,7 @@ def dept_get(id):
         if int(dept['id']) == id:
             return jsonify(status='success', dept=dept)
 
+
     return jsonify(status='failed', msg='dept not found')
 
 

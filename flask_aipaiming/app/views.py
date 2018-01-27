@@ -5,26 +5,6 @@ from flask import render_template, request,jsonify
 from app.models import Todo, TodoForm
 from app import app
 
-
-tasks = [
-    {
-        'id': 1,
-        'title': u'Buy groceries',
-        'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
-        'done': False
-    },
-    {
-        'id': 2,
-        'title': u'Learn Python',
-        'description': u'Need to find a good Python tutorial on the web',
-        'done': False
-    }
-]
-
-@app.route('/app/tasks/', methods=['GET'])
-def get_tasks():
-    return jsonify({'tasks': tasks})
-
 @app.route('/')
 def index():
     form = TodoForm()
@@ -39,6 +19,25 @@ def api_todolist():
     #return render_template("index.html",todos=todos,form=form)
     return  jsonify(todos)
 
+#Home
+@app.route('/main/')
+def mainpage():
+    return  render_template("main.html")
+
+#category
+@app.route('/category/')
+def category():
+    return  render_template("category.html")
+#me
+@app.route('/me/')
+def me():
+    return  render_template("me.html")
+
+
+#detail
+@app.route('/detail/')
+def detail():
+    return  render_template("detail.html")
 
 @app.route('/add', methods=['POST',])
 def add():

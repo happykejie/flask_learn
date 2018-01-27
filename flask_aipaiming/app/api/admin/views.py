@@ -15,7 +15,6 @@ user_data = [
     }
 ]
 
-
 @admin.route('/admin/user/<int:id>', methods=['GET', ])
 def ad_user_get(id):
     for user in user_data:
