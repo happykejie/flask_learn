@@ -8,6 +8,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:kejie@1234@121.42.165.46:3
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 db =SQLAlchemy(app)
 
+
+
 app.config['JSON_AS_ASCII'] = False
 
 
