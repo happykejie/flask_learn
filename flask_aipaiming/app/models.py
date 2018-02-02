@@ -41,17 +41,6 @@ class ApmUsers(db.Model):
         return '<Apm_Users %r>' % self.user_login
 
 
-class Apmuser(db.Model):
-    user_id = db.Column(db.Integer,primary_key=True)
-    user_name =db.Column(db.String)
-    user_nick = db.Column(db.String)
-
-    def __init__(self,user_id,user_name,user_nick):
-        self.user_id =user_id
-        self.user_name =user_name
-        self.user_nick = user_nick
-    def __str__(self):
-        return "id:{}--name:{}--nick:{}".format(self.user_id,self.user_name,self.user_nick)
 
 
 class ApmTerms(db.Model):
@@ -136,8 +125,11 @@ class ApmPostmeta(db.Model):
     post_id = db.Column(db.BIGINT)
     meta_key = db.Column(db.String)
     meta_value = db.Column(db.Text)
-    def __init__(self):
-        pass
+    def __init__(self,meta_id,post_id,meta_key,meta_value):
+        self.meta_id = meta_id
+        self.post_id = post_id
+        self.meta_key = meta_key
+        self.meta_value = meta_value
 
 class ApmPosts(db.Model):
     ID =db.Column(db.BIGINT,primary_key=True)
@@ -148,6 +140,8 @@ class ApmPosts(db.Model):
     post_title =db.Column(db.TEXT)
     post_excerpt =db.Column(db.TEXT)
     post_status =db.Column(db.String)
+    comment_status = db.Column(db.String)
+    ping_status =db.Column(db.String)
     post_password =db.Column(db.String)
     post_name =db.Column(db.String)
     to_ping =db.Column(db.TEXT)
@@ -162,8 +156,38 @@ class ApmPosts(db.Model):
     post_mime_type =db.Column(db.String)
     comment_count =db.Column(db.INTEGER)
 
-    def __init__(self):
-        pass
+    def __init__(self,ID,post_author,post_date,post_date_gmt,post_content,post_title,
+        post_excerpt,post_status,comment_status,ping_status,post_password,post_name,to_ping,pinged,post_modified
+                 ,post_modified_gmt,post_content_filtered,post_parent,guid,menu_order
+                 ,post_type,post_mime_type,comment_count):
+        self.ID =ID
+        self.post_author = post_author
+        self.post_date =post_date
+        self.post_title = post_title
+        self.post_date_gmt =post_date_gmt
+        self.post_content =post_content
+        self.post_excerpt =post_excerpt
+        self.post_status =post_status
+        self.comment_status =comment_status
+        self.ping_status = ping_status
+        self.post_password =post_password
+        self.post_name =post_name
+        self.to_ping =to_ping
+        self.pinged =pinged
+        self.post_modified =post_modified
+        self.post_modified_gmt =post_modified_gmt
+        self.post_content_filtered =post_content_filtered
+        self.post_parent =post_parent
+        self.guid =guid
+        self.menu_order =menu_order
+        self.post_type =post_type
+        self.post_mime_type =post_mime_type
+        self.comment_count =comment_count
+
+
+
+
+
 
 
 class ApmSmushDirImanges(db.Model):

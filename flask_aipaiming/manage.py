@@ -1,8 +1,9 @@
 # -*- coding: UTF-8 -*-
 from flask_script import Manager
 from datetime import datetime
-from app.models import ApmUsers,Apmuser,ApmTerms
+from app.models import ApmUsers,ApmTerms, ApmPosts
 from app import app
+from flask import jsonify
 
 from app import db
 
@@ -20,36 +21,29 @@ def save_login():
 def query_all_login():
     apm_users = ApmUsers.query.all()
     for u in apm_users:
-        print  u
+        print u.user_login
+
+@manager.command
+def add_post():
+    currenttime = '2018-01-30 10:10:11'#datetime.year +'-'+datetime.month+'-'+datetime.day+' '+datetime.hour+':'+datetime.minute+':'+datetime.second
+    apm_post = ApmPosts(None, 1,currenttime,currenttime,'这是一个测试','测试'
+                        ,'测试1','1','1','1','password','post_name','123','123',currenttime
+                        ,currenttime,'123',1,'123',2,'123','123',1000)
+    db.session.add(apm_post)
+    db.session.commit()
 
 
 @manager.command
-def save_user():
-     apm_user = Apmuser(3,'zhangjie33','444')
-     db.session.add(apm_user)
-     db.session.commit()
-
-
-@manager.command
-def query_all_user():
-    users =Apmuser.query.all()
-    for u in users:
-        print  u
-
-
-@manager.command
-def save_item():
-     apmterms = ApmTerms(None,'test','444',0)
-     db.session.add(apmterms)
-     db.session.commit()
+def query_posts():
+    apm_posts = ApmPosts.query.filter_by(post_title='测试').first()
+    #for u in apm_posts:
+    return  apm_posts.post_title
 
 
 
-@manager.command
-def query_all_item():
-    apmterms =ApmTerms.query.all()
-    for u in apmterms:
-        print  u
+
+
+
 
 
 if __name__ == '__main__':

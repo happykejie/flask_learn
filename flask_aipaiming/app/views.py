@@ -1,19 +1,21 @@
 from datetime import datetime
 
 from flask import render_template, request,jsonify
-
-from app.models import ApmUsers
+from flask_wtf import  form
+from app.models import ApmUsers, ApmPosts
 from app import app
 
 @app.route('/')
 def index():
-    user_logins = ApmUsers.objects.order_by('-user_registered')
-    return render_template("index.html",user_logins=user_logins)
+    return  'test'
 
 #Home
 @app.route('/main/')
 def mainpage():
-    return  render_template("main.html")
+    page = request.args.get('page', 1, type=int)
+    pagination = ApmPosts.query.order_by(ApmPosts.post_date.desc()).paginate(page, per_page=10, error_out=False)
+    apm_posts = pagination.query.all()
+    return render_template('main.html', form=form, posts=apm_posts, pagination=pagination)
 
 #category
 @app.route('/category/')
